@@ -120,7 +120,7 @@ export default class TwitterTimelineEmbed extends Component {
 
   buildOptions() {
     let options = Object.assign({}, this.props.options)
-    if (this.props.autoHeight) { options.height = this.embedContainer.parentNode.offsetHeight }
+    if (this.props.autoHeight) { options.height = this.embedContainer.current.parentNode.offsetHeight }
 
     options = Object.assign({}, options, {
       theme: this.props.theme,
